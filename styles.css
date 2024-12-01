@@ -1,0 +1,332 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e tipografia */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;  /* Texto branco para contraste */
+    background-color: #2C003E; /* Fundo preto com um tom de roxo */
+}
+
+/* Header e Navegação */
+header {
+    background-color: #4B0082;  /* Roxo escuro */
+    padding: 20px;
+    flex-direction: column;
+    margin: 4px 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #8A2BE2; /* Roxo vibrante */
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #D8BFD8; /* Roxo mais suave */
+}
+
+.cta-button {
+    background-color: #8A2BE2; /* Roxo vibrante */
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7A1EAB; /* Roxo escuro no hover */
+}
+
+/* Seção Produtos */
+.produtos {
+    padding: 50px 20px;
+    background-color: #2C003E; /* Roxo escuro */
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.produtos-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.produto-item {
+    background-color: #2C003E; /* Fundo roxo mais escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra sutil */
+    text-align: center;
+    width: 45%;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.produto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto-item:hover {
+    transform: translateY(-5px);
+}
+.cta-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; 
+      
+}
+
+/* Seção Sobre Nós */
+.sobre-nos {
+    background-color: #2C003E; /* Fundo roxo mais escuro */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre-nos h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+footer {
+    background-color: #4B0082;  /* Roxo escuro */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente no nav */
+    max-width: 100px; /* Limita o tamanho máximo do contêiner */
+  }
+  
+  nav .logo img {
+    width: 100%; /* Ocupa todo o espaço do contêiner */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 2px solid #333; 
+  }
+/* Adicionando CSS para alinhar os textos à direita */
+.sobre-nos {
+    text-align: left; /* Alinha todo o conteúdo da seção à direita */
+}
+
+.sobre-nos h1, .sobre-nos h2, .sobre-nos p, .sobre-nos ul {
+    text-align: left; /* Garante que cada elemento seja alinhado à direita */
+}
+
+.sobre-nos ul {
+    list-style-position: inside; /* Melhora a aparência das listas */
+}
+
+/* Outros ajustes de responsividade e design podem ser feitos conforme necessário */
+/* Estilo para a seção de produtos e serviços */
+.produtos {
+    text-align: left; /* Alinha todo o conteúdo da seção à direita */
+}
+
+.produtos h2 {
+    text-align: left; /* Alinha o título à direita */
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.produto-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 250px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.produto-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto-item h3 {
+    color: #6a0dad;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.produto-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.produto-item .preco {
+    font-size: 1.3em;
+    color: #6a0dad; /* Cor para o preço */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #530a8a;
+}
+
+/* Estilos para a seção FAQ */
+.faq {
+    padding: 50px 20px;
+    text-align: left; /* Alinha o texto à direita */
+/* Define a direção da escrita da direita para a esquerda */
+}
+
+.faq h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 1.2em;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faq-question:hover {
+    background-color: #530a8a;
+}
+
+.faq-answer {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none; /* Inicialmente escondido */
+    margin-top: 10px;
+    color: #6a0dad;
+}
+/* Estilos para os modais de Login e Cadastro */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #530a8a;
+}

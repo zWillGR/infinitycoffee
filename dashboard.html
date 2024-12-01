@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de cliques - Infinity Coffee">
+    <title>Dashboard de Cliques</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/images/Logo.png" alt="Logo">
+        </a>
+        <h1>Painel de Vendas Infinity Coffee</h1>
+        <!-- Painel de Navegação -->
+        <nav>   
+            <ul>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="dashboard-contato.html">Mensagens</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Compras por Produto</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Total de Compras</th>
+                        <th>Valor do Produto (R$)</th> <!-- Alterado para exibir o valor unitário -->
+                        <th>Faturamento (R$)</th> <!-- Faturamento calculado -->
+                    </tr>
+                </thead>
+                <tbody id="dashboard-data">
+                    <!-- Dados serão preenchidos pelo JS -->
+                </tbody>
+            </table>
+            <h3 id="previsao-faturamento">Previsão de Faturamento: R$ 0,00</h3> <!-- Exibe a previsão de faturamento -->
+            <section id="grafico">
+                <h2>Distribuição de compras por produto</h2>
+                <div style="width: 500px; margin: auto;">
+                    <canvas id="clique-chart"></canvas>
+                </div>
+                <button id="toggle-chart" style="display: block; margin: 10px auto;">Alterar para Gráfico de Barras</button>
+            </section>            
+        </section>
+    </main>
+</body>
+</html>

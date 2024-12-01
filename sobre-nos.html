@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a história da Infinity Coffee - Café gourmet com propósito sustentável.">
+    <meta name="keywords" content="história Infinity Coffee, café gourmet, café sustentável, origem única">
+    <title>Sobre Nós - Infinity Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="/images/Logo.png" alt="Logo Infinity Coffee">
+            </a>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produto-detalhe.html">Produtos</a></li>
+                <li><a href="sobre-nos.html" class="active">Sobre Nós</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login Section -->
+        <div id="login-container">
+            <span id="welcome-message">Bem-vindo, <span id="user-name">Visitante</span></span>
+            <button id="login-btn" onclick="toggleLogin()">Entrar</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre-nos" class="sobre-nos">
+            <h1>Sobre a Infinity Coffee</h1>
+            <p>
+                Em um mundo onde a sustentabilidade é cada vez mais importante, a Infinity Coffee se destaca como uma marca comprometida em oferecer o melhor café gourmet, sem comprometer o planeta. Nossa jornada começou com a paixão por um bom café e a crença de que é possível desfrutar de um sabor excepcional sem prejudicar o meio ambiente.
+            </p>
+
+            <h2>Nossa História</h2>
+            <p>
+                Fundada em 2020, a Infinity Coffee nasceu da união de dois amigos apaixonados por café e preocupados com o futuro do planeta. Juntos, eles se dedicaram a criar uma marca que oferecesse grãos de café de alta qualidade, cultivados de forma sustentável e processados com métodos tradicionais.
+            </p>
+
+            <h2>Nossa Missão</h2>
+            <p>
+                Nossa missão é oferecer aos nossos clientes uma experiência de café única, combinando sabor, aroma e sustentabilidade. Acreditamos que o café pode ser uma força positiva para o mundo, e estamos comprometidos em fazer nossa parte para proteger o meio ambiente e apoiar as comunidades produtoras.
+            </p>
+
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li><strong>Sustentabilidade:</strong> Cultivamos nossos grãos de café de forma sustentável, respeitando o meio ambiente e as comunidades produtoras.</li>
+                <li><strong>Qualidade:</strong> Oferecemos apenas os melhores grãos de café, selecionados a dedo e torrados com perfeição.</li>
+                <li><strong>Inovação:</strong> Estamos sempre em busca de novas formas de melhorar nossos produtos e serviços, para oferecer a melhor experiência aos nossos clientes.</li>
+                <li><strong>Transparência:</strong> Acreditamos na transparência em todas as nossas relações, com nossos clientes, fornecedores e parceiros.</li>
+            </ul>
+
+            <h2>Nossos Produtos</h2>
+            <p>
+                Oferecemos uma ampla variedade de cafés gourmet, incluindo grãos de café moídos, cápsulas e café em pó. Nossos cafés são cultivados em diferentes regiões do mundo, cada uma com suas características únicas de sabor e aroma.
+            </p>
+
+            <h2>Nosso Compromisso</h2>
+            <p>
+                Estamos comprometidos em oferecer aos nossos clientes o melhor café gourmet, sem comprometer o planeta. Acreditamos que a sustentabilidade é o caminho para um futuro melhor, e estamos orgulhosos de fazer parte dessa mudança.
+            </p>
+
+            <p>
+                Junte-se a nós na jornada rumo a um futuro mais sustentável e saboroso!
+            </p>
+
+            <blockquote>
+                <strong>Infinity Coffee:</strong> Sabor Infinito, Sustentabilidade Infinita.
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Infinity Coffee - Café com Propósito, Sabor com Consciência.</p>
+            <div class="social-media">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulação de login com nome de usuário
+        function toggleLogin() {
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn) {
+                localStorage.removeItem('loggedIn');
+                document.getElementById('user-name').textContent = 'Visitante';
+                document.getElementById('login-btn').textContent = 'Entrar';
+            } else {
+                localStorage.setItem('loggedIn', true);
+                document.getElementById('user-name').textContent = 'Usuário';
+                document.getElementById('login-btn').textContent = 'Sair';
+            }
+        }
+
+        // Manter login entre as páginas
+        window.onload = function() {
+            if (localStorage.getItem('loggedIn')) {
+                document.getElementById('user-name').textContent = 'Usuário';
+                document.getElementById('login-btn').textContent = 'Sair';
+            } else {
+                document.getElementById('user-name').textContent = 'Visitante';
+                document.getElementById('login-btn').textContent = 'Entrar';
+            }
+        };
+    </script>
+</body>
+</html>

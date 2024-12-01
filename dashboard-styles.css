@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+}
+
+main {
+    padding: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente no nav */
+    max-width: 100px; /* Limita o tamanho máximo do contêiner */
+  }
+  
+.logo img {
+    width: 100%; /* Ocupa todo o espaço do contêiner */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 2px solid #333; 
+  }
+
+  header {
+    background-color: #4B0082;  /* Roxo escuro */
+    padding: 20px;
+    flex-direction: column;
+    margin: 4px 2px;
+    height: auto;
+}
+/* Estilo do Header */
+header {
+    background-color: #2C3E50; /* Cor de fundo do header */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+/* Estilo do Navegador */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+nav ul li a:hover {
+    color: #f39c12; /* Cor dourada ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento do link */
+}
+
+/* Estilo do botão para alternar entre os dashboards */
+#toggle-dashboard {
+    background-color: #f39c12; /* Cor de fundo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-dashboard:hover {
+    background-color: #e67e22; /* Cor de hover */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}

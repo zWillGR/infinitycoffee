@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ Infinity Coffee - Perguntas Frequentes sobre café gourmet e sustentável.">
+    <meta name="keywords" content="FAQ, perguntas frequentes, café gourmet, café sustentável, Infinity Coffee">
+    <title>Infinity Coffee - FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="faq.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="/images/Logo.png" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produto-detalhe.html">Produtos</a></li>
+                <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login Section -->
+        <div id="login-container">
+            <span id="welcome-message">Bem-vindo, <span id="user-name">Visitante</span></span>
+            <button id="login-btn" onclick="toggleLogin()">Entrar</button>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">O que é o café de origem única?</button>
+            <div class="faq-answer">
+                <p>O café de origem única é cultivado em uma única região, normalmente em uma fazenda ou cooperativa específica. Isso permite que o sabor e as características do café sejam mais distintos e exclusivos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Como posso garantir a sustentabilidade ao comprar café?</button>
+            <div class="faq-answer">
+                <p>Ao escolher cafés de marcas comprometidas com a sustentabilidade, como a Infinity Coffee, você garante que os grãos foram cultivados de forma ética, respeitando o meio ambiente e as comunidades produtoras.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Quais são os benefícios do café orgânico?</button>
+            <div class="faq-answer">
+                <p>O café orgânico é cultivado sem o uso de pesticidas ou produtos químicos sintéticos, o que resulta em um produto mais saudável e saboroso, além de ser melhor para o meio ambiente.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Vocês entregam em todo o Brasil?</button>
+            <div class="faq-answer">
+                <p>Sim, realizamos entregas para todo o Brasil. Verifique as opções de frete no momento da compra para saber os prazos e valores de envio para sua região.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Como posso realizar meu pedido?</button>
+            <div class="faq-answer">
+                <p>Você pode realizar seu pedido diretamente em nosso site, acessando a seção de produtos e escolhendo os cafés que deseja comprar. O pagamento pode ser feito com cartão de crédito, boleto bancário ou outros métodos disponíveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Infinity Coffee - Café com Propósito, Sabor com Consciência.</p>
+            <div class="social-media">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulação de login com nome de usuário
+        function toggleLogin() {
+            const loggedIn = localStorage.getItem('loggedIn');
+            if (loggedIn) {
+                localStorage.removeItem('loggedIn');
+                document.getElementById('user-name').textContent = 'Visitante';
+                document.getElementById('login-btn').textContent = 'Entrar';
+            } else {
+                localStorage.setItem('loggedIn', true);
+                document.getElementById('user-name').textContent = 'Usuário';
+                document.getElementById('login-btn').textContent = 'Sair';
+            }
+        }
+
+        // Manter login entre as páginas
+        window.onload = function() {
+            if (localStorage.getItem('loggedIn')) {
+                document.getElementById('user-name').textContent = 'Usuário';
+                document.getElementById('login-btn').textContent = 'Sair';
+            } else {
+                document.getElementById('user-name').textContent = 'Visitante';
+                document.getElementById('login-btn').textContent = 'Entrar';
+            }
+        };
+    </script>
+</body>
+</html>

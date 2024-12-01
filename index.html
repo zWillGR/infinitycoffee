@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café gourmet Infinity Coffee - Sabor infinito, sustentabilidade infinita.">
+    <meta name="keywords" content="café gourmet, café sustentável, café de origem única, grãos de café, Infinity Coffee">
+    <title>Infinity Coffee - Café Gourmet e Sustentável</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="/images/Logo.png" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="produto-detalhe.html">Produtos</a></li>
+                <li><a href="#sobre-nos">Sobre Nós</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contato.html">Contato</a></li>
+
+                <!-- Exibe o nome do usuário ou opção de login -->
+                <li id="user-info">
+                    <a href="#" onclick="openLogin()">Entrar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Sabor Infinito, Sustentabilidade Infinita</h1>
+            <p>Descubra o verdadeiro sabor do café gourmet com a Infinity Coffee.</p>
+            <a href="#produtos" class="cta-button">Explore Nossos Produtos</a>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Produtos Populares</h2>
+        <div class="produtos-lista">
+            <!-- Produto 1 -->
+            <div class="produto-item">
+                <img src="/images/cafe_organico.jfif" alt="Café Gourmet Orgânico">
+                <h3>Café Orgânico</h3>
+                <p>O melhor do café de origem única, sem pesticidas.</p>
+                <a href="produto-detalhe.html" class="cta-button">Comprar</a>
+            </div>
+            <!-- Produto 2 -->
+            <div class="produto-item">
+                <img src="/images/cafe_unico.png" alt="Café de Origem Única">
+                <h3>Café de Origem Única</h3>
+                <p>Aproveite o sabor puro e intenso de grãos selecionados.</p>
+                <a href="produto-detalhe.html" class="cta-button">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre-nos" class="sobre-nos">
+        <h2>Sobre a Infinity Coffee</h2>
+        <p>Na Infinity Coffee, acreditamos que o café vai além do sabor. Cada grão é cultivado com respeito à natureza e ao futuro.</p>
+        <a href="sobre-nos.html" class="cta-button">Saiba Mais</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Infinity Coffee - Café com Propósito, Sabor com Consciência.</p>
+            <div class="social-media">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" id="loginEmail" placeholder="Email" />
+            <input type="password" id="loginPassword" placeholder="Senha" />
+            <button onclick="login()">Entrar</button>
+            <p>Não tem uma conta? <a href="#" onclick="openSignup()">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <h2>Cadastro</h2>
+            <input type="text" id="signupName" placeholder="Nome" />
+            <input type="email" id="signupEmail" placeholder="Email" />
+            <input type="password" id="signupPassword" placeholder="Senha" />
+            <input type="text" id="signupAddress" placeholder="Endereço" />
+            <button onclick="signup()">Cadastrar</button>
+            <p>Já tem uma conta? <a href="#" onclick="closeSignup()">Entrar</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

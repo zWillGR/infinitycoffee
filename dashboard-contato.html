@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard de cliques - Infinity Coffee">
+    <title>Dashboard de Cliques</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="/images/Logo.png" alt="Logo">
+        </a>
+        <h1>Painel de Vendas Infinity Coffee</h1>
+        <!-- Painel de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="dashboard-contato.html">Mensagens</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Dashboard de Mensagens - Infinity Coffee">
+        <title>Dashboard de Mensagens</title>
+        <link rel="stylesheet" href="dashboard-styles.css">
+        <script defer src="dashboard.js"></script>
+    </head>
+    <body>
+        <main>
+            <section id="dashboard">
+                <h2>Mensagens Enviadas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Mensagem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="message-list">
+                        <!-- As mensagens enviadas serão exibidas aqui -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    
+        <footer>
+            <p>&copy; 2024 Infinity Coffee</p>
+        </footer>
+    
+        <script>
+            // Função para carregar as mensagens
+            window.onload = function() {
+                const messages = JSON.parse(localStorage.getItem('messages')) || [];
+                const messageList = document.getElementById('message-list');
+                messages.forEach(message => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${message.nome}</td>
+                        <td>${message.email}</td>
+                        <td>${message.mensagem}</td>
+                    `;
+                    messageList.appendChild(row);
+                });
+            };
+        </script>
+    </body>
+    </html>
+    
